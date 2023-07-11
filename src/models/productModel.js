@@ -60,7 +60,7 @@ const productSchema = new mongoose.Schema(
     installments: {
         type: Number
     },
-
+    
     deletedAt: {
         type: Date
     },
@@ -71,4 +71,4 @@ const productSchema = new mongoose.Schema(
     },
 },{ timestamps: true })
 
-module.exports = mongoose.model('ProductData', productSchema)
+module.exports = mongoose.model('Products', productSchema)
