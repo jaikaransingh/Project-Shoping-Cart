@@ -34,8 +34,8 @@ router.delete( "/users/:userId/cart" , isAuthenticated , isAuthorized , deleteCa
 router.post( "/users/:userId/orders", isAuthenticated , isAuthorized , createOrder );
 router.put( "/users/:userId/orders" , isAuthenticated , isAuthorized , updateOrder );
 
-router.all('/*', (req , res) => {
-    res.status(400).send({ status: false, message: " path invalid" });
-});
+// router.all('/*', (req , res) => {
+//     res.status(400).send({ status: false, message: " path invalid" });
+// });
 
 module.exports = router;
