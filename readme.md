@@ -42,59 +42,57 @@ The "Shopping Cart" project is a web application that simulates an online shoppi
 }
 
 ### User APIs
-## POST /register
-
+POST /register
     Create a user.
     Return HTTP status 201 on a successful user creation, along with the user document.
     Return HTTP status 400 for an invalid request.
 
-### POST /login
-
+POST /login
     Allow a user to login with their email and password.
     On a successful login attempt, return a JWT token containing the userId, exp, and iat.
     If the credentials are incorrect, return an error message with a valid HTTP status code.
 
 ### Product APIs
-## POST /products
+POST /products
 
     Create a product document.
     Return HTTP status 201 on successful product creation, along with the product document.
     Return HTTP status 400 for an invalid request.
 
-## GET /products
+GET /products
 
     Returns all products available.
     Return HTTP status 200 if any documents are found.
     Return HTTP status 404 if no documents are found.
 
-## GET /products/:productId
+GET /products/:productId
 
     Returns details of a product.
     Return HTTP status 200 if the document is found.
     Return HTTP status 404 if the document is not found.
 
 ### Cart APIs
-## POST /cart/add/:productId
+POST /cart/add/:productId
 
     Add a product to the cart.
     Check if the productId exists and has enough stock.
     Update the user's cart or create a new cart item.
     Return the updated cart on successful operation.
 
-## POST /cart/remove/:productId
+POST /cart/remove/:productId
 
     Remove a product from the cart.
     Check if the productId exists in the user's cart.
     Remove the cart item from the user's cart.
     Return the updated cart on successful operation.
 
-## GET /cart
+GET /cart
 
     Returns the user's cart with product details.
     Return HTTP status 200 if the cart has items.
     Return HTTP status 404 if the cart is empty.
 
-## POST /cart/checkout
+POST /cart/checkout
 
     Process the user's cart items for checkout.
     Check if cart items are valid and have sufficient stock.
