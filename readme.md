@@ -8,7 +8,6 @@ The "Shopping Cart" project is a web application that simulates an online shoppi
 
 ### User Model
 
-```json
 {
   "name": "John Doe",
   "email": "johndoe@mailinator.com",
@@ -16,10 +15,7 @@ The "Shopping Cart" project is a web application that simulates an online shoppi
   "createdAt": "2021-09-17T04:25:07.803Z",
   "updatedAt": "2021-09-17T04:25:07.803Z"
 }
-
 ### Product Model
-
-```json
 
 {
   "name": "Product Name",
@@ -32,8 +28,6 @@ The "Shopping Cart" project is a web application that simulates an online shoppi
 
 ### Cart Item Model
 
-```json
-
 {
   "productId": "ObjectId",
   "quantity": 2,
@@ -42,6 +36,7 @@ The "Shopping Cart" project is a web application that simulates an online shoppi
 }
 
 ### User APIs
+
 POST /register
     Create a user.
     Return HTTP status 201 on a successful user creation, along with the user document.
@@ -99,7 +94,7 @@ POST /cart/checkout
     Deduct the stock, create an order, and clear the cart.
     Return HTTP status 200 on successful checkout.
 
-###Setup Instructions
+### Setup Instructions
 
     Clone the project repository.
     Install the required dependencies using npm install.
